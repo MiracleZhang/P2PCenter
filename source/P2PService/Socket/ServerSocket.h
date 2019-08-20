@@ -60,7 +60,7 @@ public:
 		initSockAddrIn( host, port, _addrIn );
 
 		// bind socket
-		if ( bind( _socket, (const SOCKADDR *) &_addrIn, sizeof(_addrIn) ) == SOCKET_ERROR )
+		if ( ::bind( _socket, (const SOCKADDR *) &_addrIn, sizeof(_addrIn) ) == SOCKET_ERROR )
 		{
 			int error = getLastError();
 			return false;

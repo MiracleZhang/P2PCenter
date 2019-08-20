@@ -296,7 +296,7 @@ void CInternetUrl::url_escape_string(char *outbuf, const char *inbuf) {
 
 	// Look if we have an ip6 address, if so skip it there is
 	// no need to escape anything in there.
-	tmp = strstr(inbuf,"://[");
+	tmp = (char*)strstr(inbuf,"://[");
 	if(tmp) {
 		tmp = strchr(tmp+4,']');
 		if(tmp && (tmp[1] == '/' || tmp[1] == ':' ||
