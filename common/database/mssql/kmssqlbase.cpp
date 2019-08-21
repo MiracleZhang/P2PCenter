@@ -59,6 +59,7 @@ void CKMSSqlBase::SetConnString( const char* pConnStr)
 
 BOOL CKMSSqlBase::Open( const char* pConnStr)
 {
+	return TRUE;
 	try
 	{
 		if ( pConnStr)
@@ -88,6 +89,7 @@ void CKMSSqlBase::Close()
 
 BOOL CKMSSqlBase::IsOpen()
 {
+	return TRUE;
 	try
 	{
 		if(m_pLocalConnectPtr->State)
@@ -104,6 +106,7 @@ BOOL CKMSSqlBase::IsOpen()
 
 BOOL CKMSSqlBase::TestConnect()
 {
+	return TRUE;
 	try
 	{
 		m_pLocalConnectPtr->Open(m_pcConnection,"","",adConnectUnspecified);
@@ -118,6 +121,7 @@ BOOL CKMSSqlBase::TestConnect()
 
 BOOL CKMSSqlBase::Exec(char* pSql, char *pRet, int iRetLen)
 {
+	return TRUE;
 	try
 	{
 		HRESULT _hr = m_pRecordsetPtr->Open(

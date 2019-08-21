@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 8.00.0603 */
-/* at Tue Aug 20 15:16:57 2019
+/* at Wed Aug 21 18:29:10 2019
  */
 /* Compiler settings for P2PService.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 

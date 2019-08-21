@@ -13,6 +13,7 @@ CMSSQLStore::~CMSSQLStore(void)
 
 bool CMSSQLStore::AppendChannelToDB( CChannel* pChannel)
 {
+	return true;
 	if ( IsOpen())
 	{
 		try
@@ -73,6 +74,7 @@ bool CMSSQLStore::AppendChannelToDB( CChannel* pChannel)
 
 bool CMSSQLStore::UpdateChannelTick( CChannel* pChannel)
 {
+	return true;
 	if ( IsOpen())
 	{
 		try
@@ -121,6 +123,7 @@ bool CMSSQLStore::UpdateChannelTick( CChannel* pChannel)
 
 bool CMSSQLStore::RemoveChannelFromDB( CChannel* pChannel)
 {
+	return true;
 	char szSql[256];
 	sprintf( szSql, "DELETE Channel WHERE userid = %d AND filehash = '%s'", 
 		pChannel->m_nUserID, pChannel->m_sChannelID.c_str());
